@@ -7,9 +7,19 @@ void setup() {
 
 void loop() {
   int analogReading = analogRead(sensorPin);
-
-  Serial.println("reading: = ");
-  Serial.println(analogReading);
+  if (analogReading <10) 
+  Serial.println("does not qualify");
+  else if (analogReading >10) && (analogReading <40)
+  Serial.println("light touch");
+  else if (analogReading >40) && (analogReading <70)
+  Serial.println("medium touch");
+  else if (analogReading >70) 
+  Serial.println("Qualified");
+  else
+  Serial.println(":0");
+ 
+  serial
+  
 //;dummy code
   delay(10);
 
