@@ -2,14 +2,15 @@
 //initialize the sensor 
 void setup() {
  //print satmenet to get the raw reading
- Serial.print("reading: = ");
- Serial.print(analogReading);
+ Serial.begin(10);
 }
 
 void loop() {
-  int analogReading = analogRead(sensorPin)
-  Serial.print(analogReading);
+  int analogReading = analogRead(sensorPin);
+
+  Serial.println("reading: = ");
+  Serial.println(analogReading);
 //;dummy code
-  delay(1000)
- 
+  delay(10);
+
 }
